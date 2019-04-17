@@ -9439,8 +9439,8 @@ url@^0.11.0:
     querystring "0.2.0"
 
 "use-viewport@github:heineiuo/use-viewport":
-  version "0.0.0"
-  resolved "https://codeload.github.com/heineiuo/use-viewport/tar.gz/169c2e3dc945b4ceb673a162fb5cd96ec7726b78"
+  version "1.0.0"
+  resolved "https://codeload.github.com/heineiuo/use-viewport/tar.gz/477b4c1c608c37135e0027afd37e7fccaa82e2a9"
 
 use@^3.1.0:
   version "3.1.1"
