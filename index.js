@@ -51,15 +51,17 @@ var getSize = function (Name) {
 }
 
 module.exports = module.exports.default = function useViewport() {
-  var [size, setSize] = useState(getSize())
+  var [width, setWidth] = useState(getSize('Width'))
+  var [height, setHeight] = useState(getSize('Height'))
   function updateSize() {
-    setSize(getSize())
+    setWidth(getSize('Width'))
+    setHeight(getSize('Height'))
   }
   useEffect(() => {
-    window.addEventListener('size', updateSize)
+    window.addEventListener('resize', updateSize)
     return () => {
-      window.removeEventListener('size', updateSize)
+      window.removeEventListener('resize', updateSize)
     }
   }, [])
-  return size
+  return [width, height]
 }
