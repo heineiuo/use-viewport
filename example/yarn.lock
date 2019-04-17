@@ -9440,7 +9440,7 @@ url@^0.11.0:
 
 "use-viewport@github:heineiuo/use-viewport":
   version "1.0.0"
-  resolved "https://codeload.github.com/heineiuo/use-viewport/tar.gz/477b4c1c608c37135e0027afd37e7fccaa82e2a9"
+  resolved "https://codeload.github.com/heineiuo/use-viewport/tar.gz/af3103044988bdddde731cf2d800b7c5d04ef9fc"
 
 use@^3.1.0:
   version "3.1.1"
