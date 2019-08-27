@@ -1,12 +1,13 @@
 var react = require('react')
+var { useState, useEffect } = react
 
 /*! viewportSize | Author: Tyson Matanich, 2013 | License: MIT */
 var viewportSize = {}
-window.viewportSize.getHeight = function () {
+viewportSize.getHeight = function () {
   return getSize('Height')
 }
 
-window.viewportSize.getWidth = function () {
+viewportSize.getWidth = function () {
   return getSize('Width')
 }
 
@@ -47,4 +48,20 @@ var getSize = function (Name) {
     size = window['inner' + Name]
   }
   return size
+}
+
+module.exports = module.exports.default = function useViewport() {
+  var [width, setWidth] = useState(getSize('Width'))
+  var [height, setHeight] = useState(getSize('Height'))
+  function updateSize() {
+    setWidth(getSize('Width'))
+    setHeight(getSize('Height'))
+  }
+  useEffect(() => {
+    window.addEventListener('resize', updateSize)
+    return () => {
+      window.removeEventListener('resize', updateSize)
+    }
+  }, [])
+  return [width, height]
 }
